@@ -1,40 +1,54 @@
-# 🚗 Vehicle Registration System
+# 🚗 Vehicle Registration
 
-A Java console application that manages vehicle registration details such as make, model, year, VIN, and license plate. This project is designed for learning Java fundamentals and object-oriented programming.
+A Java console application for capturing vehicle registration details, with validation for South African (Gauteng) number plates and 17-character VINs. I built it to practise Java fundamentals, OOP and input validation.
 
----
-
-## 📁 Project Structure
-
-- `Vehicle.java` – Class representing a vehicle with attributes like make, model, year, VIN, and license plate
-- `VehicleRegistration.java` – Main class to handle vehicle registration logic and user interaction
+`Java` `OOP` `Console I/O` `BlueJ`
 
 ---
 
 ## ✅ Features
 
-- Add new vehicle registration with details:
-  - Make, Model, Year
-  - Vehicle Identification Number (VIN)
-  - License Plate Number
-- Validate input data formats
-- Search and display registered vehicles
-- Update or delete vehicle records (optional enhancement)
+- Start-up menu (register, view or exit). Registration works now, and view and exit are next on the list (see Next steps)
+- Captures **make, model, VIN, licence plate, year of manufacture and mileage**
+- **VIN validation:** must be exactly 17 characters (automatically uppercased)
+- **Licence plate validation** for both Gauteng formats:
+  - Old format: `ABC123GP` (3 letters, 3 digits, GP)
+  - New format: `AB12CDGP` (2 letters, 2 digits, 2 letters, GP)
+- Register several vehicles in one session
 
 ---
 
-## 🔧 How to Run
+## 📁 Project structure
 
-### Using BlueJ
+| File | Purpose |
+|---|---|
+| `Main.java` | Entry point: menu, user input and validation logic |
+| `Car.java` | Vehicle model with private fields, a constructor, getters and setters |
+| `package.bluej`, `README.TXT` | BlueJ project files |
 
-1. Open BlueJ
-2. Go to **Project > Open Project...**
-3. Select the folder containing this project (`Vehicle.java`, `VehicleRegistration.java`)
-4. Right-click on the `VehicleRegistration` class
-5. Select `void main(String[] args)` to run
+---
 
-### Using Terminal (Optional)
+## 🔧 How to run
+
+**Terminal**
 
 ```bash
-javac Vehicle.java VehicleRegistration.java
-java VehicleRegistration
+javac Main.java Car.java
+java Main
+```
+
+**BlueJ:** open the project folder, right-click `Main`, then choose `void main(String[] args)`.
+
+---
+
+## 🚀 Next steps
+
+- Store each vehicle as a `Car` object in an `ArrayList` so that menu option 2 (view registered vehicles) can list them
+- Make menu option 3 exit straight away
+- Validate the year of manufacture and mileage as numbers
+
+---
+
+## 👩🏾‍💻 Author
+
+**Sharon Galela** · [LinkedIn](https://www.linkedin.com/in/sharon-galela-6998bb265) · [GitHub](https://github.com/ShariieG)
